@@ -1,0 +1,13 @@
+<fa-app ng-controller='ctrl' id="app">
+    <background></background>
+    <logo></logo>
+    <fa-modifier fa-origin="option.align" ng-repeat="option in options">
+        <fa-surface fa-background-color="'black'" fa-click="slip(option.func.name)" fa-size="[100,42]"><div style="color:white;font-size:1.5em"><a style="color:white;text-decoration:none;padding:10px" href="#">{{option.func.name}}</a></div></fa-surface>
+    </fa-modifier>
+    
+    <fa-modifier fa-origin="[-.9,-.07]" fa-translate="payout.scale.get()" fa-opacity="payout.opacity.get()">
+        <fa-surface class="option" fa-size="payout.size" fa-background-color="'#eee'">
+            some payout data
+        </fa-surface>
+    </fa-modifier>
+</fa-app>
